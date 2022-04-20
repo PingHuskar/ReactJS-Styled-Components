@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavBar,NavLogo } from '../styles/styledElements'
+import { NavBar,NavLogo,NavMenu,NavList,NavLink } from '../styles/styledElements'
 function Nav() {
   return (
     <>
@@ -7,6 +7,17 @@ function Nav() {
         <NavLogo to='/'>
             MyReactSite
         </NavLogo>
+        <NavMenu>
+          <NavList>
+            <NavLink to='/'>Home</NavLink>
+          </NavList>
+          <NavList>
+            <NavLink to='/about'>About</NavLink>
+          </NavList>
+          <NavList>
+            <NavLink to='/blog'>Blog</NavLink>
+          </NavList>
+        </NavMenu>
     </NavBar>
     </>
   )
