@@ -51,3 +51,13 @@ export const NavLink = styled(Link)`
         color: #000;
     }
 `
+
+export const FooterCon = styled.footer`
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+`
