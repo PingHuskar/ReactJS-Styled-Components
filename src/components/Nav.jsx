@@ -1,13 +1,15 @@
-import React from 'react'
-import { NavBar,NavLogo,NavMenu,NavList,NavLink } from '../styles/styledElements'
+import { useState } from 'react'
+import { NavBar,NavLogo,NavMenu,NavList,NavLink,Bars } from '../styles/styledElements'
 function Nav() {
+  const [show,setShow] = useState(false);
   return (
     <>
-    <NavBar>
+    <NavBar show={show}>
+      <Bars onClick={() => setShow(!show)} />
         <NavLogo to='/'>
             MyReactSite
         </NavLogo>
-        <NavMenu>
+        <NavMenu show={show}>
           <NavList>
             <NavLink to='/'>Home</NavLink>
           </NavList>

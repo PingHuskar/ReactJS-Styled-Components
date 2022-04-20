@@ -30,7 +30,8 @@ export const NavMenu = styled.ul`
   list-style-type: none;
   height: auto;
   @media screen and (max-width: 768px) {
-    display: none;
+    // display: none;
+    display: ${props => props.show ? 'block' : 'none'}
   }
 `;
 
@@ -61,3 +62,17 @@ export const FooterCon = styled.footer`
   position: fixed;
   bottom: 0;
 `
+
+export const Bars = styled(FaBars)`
+  display: none;
+  color: #fff;
+  @media screen and (max-width: 768px) {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 100%);
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+`;
