@@ -20,6 +20,12 @@ function Blog() {
     <Container>
         <h1>Blog</h1>
         <hr />
+        { loading ? (
+            <div style={{display:"flex", justifyContent:'center'}}>
+                <ReactLoading type={'bars'} color={'#3400ff'} height={'20%'} width={'20%'} />
+            </div>
+        ) : (
+            <>
             {posts.map((data, idx) => (
                 <div key={idx}>
                     <h4>Name: {data.name}</h4>
@@ -28,6 +34,9 @@ function Blog() {
                     <hr />
                 </div>
             ))}
+            </>
+            )
+        }
     </Container>
   )
 }
